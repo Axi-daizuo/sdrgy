@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>山东瑞骨生物科技有限公司 | Shandong Ruigu Biotechnology Limited Company</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2a6496;
+            --secondary-color: #4a8fc9;
+            --accent-color: #e8f0f8;
+            --text-color: #333;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .nav-link {
+            color: var(--text-color);
+            font-weight: 500;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .hero-section {
+            background-color: var(--accent-color);
+            padding: 6rem 0;
+            text-align: center;
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 2rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 0.5rem 1.5rem;
+            font-weight: 500;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        .product-section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+            font-weight: bold;
+        }
+        
+        .product-card {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .product-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-top: 1rem;
+        }
+        
+        .product-desc {
+            color: var(--text-color);
+            margin-top: 1rem;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
+        }
+        
+        .footer-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-contact li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-bottom {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        
+        .language-toggle {
+            cursor: pointer;
+            color: var(--primary-color);
+            background-color: white;
+            border-radius: 20px;
+            padding: 5px 15px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .language-toggle:hover {
+            background-color: var(--accent-color);
+        }
+        
+        .en {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                山东瑞骨生物科技有限公司
+                <span class="d-block small">Shandong Ruigu Biotechnology Co., Ltd.</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">首页 / Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#product">产品 / Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">关于我们 / About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">联系方式 / Contact</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <div class="language-toggle" onclick="toggleLanguage()">
+                            <span class="zh">EN</span>
+                            <span class="en">中文</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <h1 class="hero-title zh">引领骨再生技术，共创健康未来</h1>
+            <h1 class="hero-title en">Leading Bone Regeneration Technology for a Healthier Future</h1>
+            <p class="hero-subtitle zh">创新生物材料，促进骨生成与血管新生</p>
+            <p class="hero-subtitle en">Innovative Biomaterials for Bone Formation and Angiogenesis</p>
+            <a href="#product" class="btn btn-primary btn-lg zh">了解我们的产品</a>
+            <a href="#product" class="btn btn-primary btn-lg en">Explore Our Products</a>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section class="product-section" id="product">
+        <div class="container">
+            <h2 class="section-title zh">产品介绍</h2>
+            <h2 class="section-title en">Product Introduction</h2>
+            
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <div class="video-container">
+                       <img src="./images/1.jpg" width="100%" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <h3 class="product-title zh">维骨康修复膜 (Ruigu Bio-membrane)</h3>
+                    <h3 class="product-title en">Ruigu Bio-membrane</h3>
+                    <div class="product-desc zh">
+                        <p>维骨康修复膜是山东瑞骨生物科技有限公司研发的创新型生物材料，核心成分为生物相容性大分子、金属离子及天然植物多酚，兼具促进骨生成、血管新生与免疫调节多重功效。其低免疫原性与高生物相容性，确保其在外科手术中安全适用。</p>
+                        <p>产品采用亲水微观结构，湿润状态下可紧密贴合骨壁，形成稳定屏障，为骨生长提供充足时间与免疫微环境。适用于口腔种植引导骨再生术、牙槽嵴增高/扩增术、骨缺损填充等场景，亦能用于骨质疏松患者的骨裂修复。</p>
+                        <p>使用时需遵循无菌操作，可根据缺损范围剪裁膜片（超出边缘至少2mm），粗糙面朝向骨组织，光滑面贴附软组织。通过固定与减张缝合确保位置稳定，其高抗拉强度与亲水性助力血凝块形成与伤口闭合。产品规格涵盖直径16mm、35mm、90mm，为骨修复领域提供高效便捷的解决方案。</p>
+                    </div>
+                    <div class="product-desc en">
+                        <p>Ruigu Bio-membrane is an innovative biomaterial developed by Shandong Ruigu Biotechnology Co., Ltd. Its core components include biocompatible macromolecules, metal ions, and natural plant polyphenols, offering multiple benefits including bone formation promotion, angiogenesis, and immune regulation. With low immunogenicity and high biocompatibility, it ensures safe application in surgical procedures.</p>
+                        <p>The product features a hydrophilic microscopic structure that closely adheres to bone walls when moistened, forming a stable barrier and providing sufficient time and immune microenvironment for bone growth. It is suitable for guided bone regeneration in dental implants, alveolar ridge augmentation/expansion, bone defect filling, and bone fracture repair in osteoporosis patients.</p>
+                        <p>Usage requires sterile procedures, with the membrane cut according to the defect area (extending at least 2mm beyond the edges). The rough surface faces bone tissue while the smooth surface attaches to soft tissue. Position stability is ensured through fixation and tension-free suturing, while its high tensile strength and hydrophilicity aid blood clot formation and wound closure. Available in 16mm, 35mm, and 90mm diameters, it provides an efficient solution for bone repair.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-md-4 mb-4">
+                    <div class="text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-dna"></i>
+                        </div>
+                        <h4 class="feature-title zh">生物相容性材料</h4>
+                        <h4 class="feature-title en">Biocompatible Materials</h4>
+                        <p class="zh">由生物相容性大分子、金属离子及天然植物多酚组成，确保安全适用于外科手术</p>
+                        <p class="en">Composed of biocompatible macromolecules, metal ions and natural plant polyphenols, ensuring safe application in surgical procedures</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-bone"></i>
+                        </div>
+                        <h4 class="feature-title zh">骨生成促进</h4>
+                        <h4 class="feature-title en">Bone Formation Promotion</h4>
+                        <p class="zh">促进骨生成与血管新生，为骨生长提供理想微环境和充足屏障时间</p>
+                        <p class="en">Promotes bone formation and angiogenesis, providing an ideal microenvironment and sufficient barrier time for bone growth</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <h4 class="feature-title zh">亲水微观结构</h4>
+                        <h4 class="feature-title en">Hydrophilic Microstructure</h4>
+                        <p class="zh">湿润状态下依然保持完整结构，紧密贴合骨壁，形成稳定屏障</p>
+                        <p class="en">Maintains its integrity when moistened, closely adhering to bone walls to form a stable barrier</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Specifications -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 zh">产品规格</h2>
+            <h2 class="text-center mb-4 en">Product Specifications</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead class="table-primary">
+                                <tr>
+                                    <th class="zh">规格</th>
+                                    <th class="en">Specifications</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="zh">直径16 mm</td>
+                                    <td class="en">Diameter 16 mm</td>
+                                </tr>
+                                <tr>
+                                    <td class="zh">直径35 mm</td>
+                                    <td class="en">Diameter 35 mm</td>
+                                </tr>
+                                <tr>
+                                    <td class="zh">直径90 mm</td>
+                                    <td class="en">Diameter 90 mm</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title zh">适用范围</h2>
+            <h2 class="section-title en">Applications</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title zh">口腔种植与骨再生</h4>
+                            <h4 class="card-title en">Dental Implantation and Bone Regeneration</h4>
+                            <ul class="zh">
+                                <li>口腔种植牙同时进行引导骨再生术</li>
+                                <li>拔牙后进行即刻种植时的种植体周围引导骨再生术</li>
+                                <li>拔牙后进行延期种植时的种植体周围引导骨再生术</li>
+                                <li>局部牙槽嵴增高术（延期种植手术中应用）</li>
+                                <li>牙槽嵴扩增术（口腔修复治疗中应用）</li>
+                            </ul>
+                            <ul class="en">
+                                <li>Guided bone regeneration during dental implantation</li>
+                                <li>Guided bone regeneration around implants during immediate implantation after tooth extraction</li>
+                                <li>Guided bone regeneration around implants during delayed implantation after tooth extraction</li>
+                                <li>Local alveolar ridge augmentation (in delayed implantation surgery)</li>
+                                <li>Alveolar ridge expansion (in oral restoration treatment)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title zh">骨缺损修复</h4>
+                            <h4 class="card-title en">Bone Defect Repair</h4>
+                            <ul class="zh">
+                                <li>牙根切除术后的骨缺损区域填充</li>
+                                <li>口腔囊肿切除术后的骨缺损区域填充</li>
+                                <li>残根拔除术后的骨缺损区域填充</li>
+                                <li>牙周骨缺损修复</li>
+                                <li>骨裂型骨缺损区修复</li>
+                                <li>骨折部位修复（特别适用于骨质疏松患者）</li>
+                            </ul>
+                            <ul class="en">
+                                <li>Filling of bone defect areas after root resection</li>
+                                <li>Filling of bone defect areas after oral cyst removal</li>
+                                <li>Filling of bone defect areas after residual root extraction</li>
+                                <li>Periodontal bone defect repair</li>
+                                <li>Bone crack defect area repair</li>
+                                <li>Fracture site repair (especially for osteoporosis patients)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="bg-light py-5" id="about">
+        <div class="container">
+            <h2 class="section-title zh">关于我们</h2>
+            <h2 class="section-title en">About Us</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card border-0 bg-transparent">
+                        <div class="card-body">
+                            <p class="zh">山东瑞骨生物科技有限公司是一家专注于生物材料研发和生产的高科技企业。2024年，公司创始人魏绍银成功研制出天然可吸收生物膜Ruigu Bio-membrane。由于Ruigu Bio-membrane具有良好的骨再生和促血管生成效果，因此大大地简化了手术操作方法，进一步推动了骨再生领域的进步和发展。</p>
+                            <p class="zh">我们致力于通过创新生物材料解决骨缺损修复的临床难题，为患者提供更安全、更有效的医疗解决方案。公司汇聚了一批在生物材料、医学和工程领域拥有丰富经验的专业人才，不断推进技术创新和产品研发。</p>
+                            <p class="en">Shandong Ruigu Biotechnology Co., Ltd. is a high-tech enterprise focusing on the research and development and production of biomaterials. In 2024, company founder Wei Shaoyin successfully developed the natural absorbable biomembrane, Ruigu Bio-membrane. Due to Ruigu Bio-membrane's excellent bone regeneration and angiogenesis effects, it greatly simplifies surgical procedures, further advancing progress and development in the field of bone regeneration.</p>
+                            <p class="en">We are committed to solving clinical challenges in bone defect repair through innovative biomaterials, providing patients with safer and more effective medical solutions. The company has gathered a team of professionals with rich experience in biomaterials, medicine, and engineering, continuously advancing technological innovation and product development.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5" id="contact">
+        <div class="container">
+            <h2 class="section-title zh">联系我们</h2>
+            <h2 class="section-title en">Contact Us</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="row">
+                                <div class="col-md-6 mb-4 mb-md-0">
+                                    <h4 class="zh">联系信息</h4>
+                                    <h4 class="en">Contact Information</h4>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2">
+                                            <i class="fas fa-map-marker-alt me-2 text-primary"></i>
+                                            <span class="zh">地址：山东省</span>
+                                            <span class="en">Address: Shandong Province, China</span>
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="fas fa-phone me-2 text-primary"></i>
+                                            <span class="zh">电话：待更新</span>
+                                            <span class="en">Phone: To be updated</span>
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="fas fa-envelope me-2 text-primary"></i>
+                                            <span class="zh">邮箱：待更新</span>
+                                            <span class="en">Email: To be updated</span>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-globe me-2 text-primary"></i>
+                                            <span>https://www.ruigu.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h4 class="zh">发送信息</h4>
+                                    <h4 class="en">Send Message</h4>
+                                    <form>
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control" placeholder="姓名 / Name">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="email" class="form-control" placeholder="邮箱 / Email">
+                                        </div>
+                                        <div class="mb-3">
+                                            <textarea class="form-control" rows="3" placeholder="信息 / Message"></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary w-100 zh">发送</button>
+                                        <button type="submit" class="btn btn-primary w-100 en">Send</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="footer-title zh">山东瑞骨生物科技有限公司</h5>
+                    <h5 class="footer-title en">Shandong Ruigu Biotechnology Co., Ltd.</h5>
+                    <p class="zh">引领骨再生技术，共创健康未来</p>
+                    <p class="en">Leading Bone Regeneration Technology for a Healthier Future</p>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="footer-title zh">快速链接</h5>
+                    <h5 class="footer-title en">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white">首页 / Home</a></li>
+                        <li><a href="#product" class="text-white">产品 / Products</a></li>
+                        <li><a href="#about" class="text-white">关于我们 / About</a></li>
+                        <li><a href="#contact" class="text-white">联系方式 / Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="footer-title zh">联系我们</h5>
+                    <h5 class="footer-title en">Contact Us</h5>
+                    <ul class="list-unstyled footer-contact">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 山东省 / Shandong Province, China</li>
+                        <li><i class="fas fa-phone me-2"></i> 待更新 / To be updated</li>
+                        <li><i class="fas fa-envelope me-2"></i> 待更新 / To be updated</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <div class="container">
+                <p class="mb-0">&copy; 2024 山东瑞骨生物科技有限公司. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleLanguage() {
+            const zhElements = document.querySelectorAll('.zh');
+            const enElements = document.querySelectorAll('.en');
+            
+            zhElements.forEach(el => {
+                if (el.style.display === 'none') {
+                    el.style.display = '';
+                } else {
+                    el.style.display = 'none';
+                }
+            });
+            
+            enElements.forEach(el => {
+                if (el.style.display === 'none') {
+                    el.style.display = '';
+                } else {
+                    el.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
